@@ -3,8 +3,9 @@ const loadCountry = () => {
     const searchValue = searchField.value;
     console.log(searchValue);
     searchValue.value = '';
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=60c628ccbbf715893d1e380a1e05cd88
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=60c628ccbbf715893d1e380a1e05cd88
 `
+
     fetch(url)
         .then(res => res.json())
         .then(data => displayWeather(data));
